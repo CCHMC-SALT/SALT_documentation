@@ -12,16 +12,18 @@
 ## Git-backed Deployment
 
 At SALT, we are utilizing git-backed deployment for publishing. This best-practice technique ensures that your reports and dashboards are always updated and proper version control is enacted. We encourage publishers to use the following workflow:
-    i. In your project, create a "dev" branch to deploy from
-    ii. Deploy the "dev" branch to Posit Connect as private
-    iii. Once you're happy with the deployment, merge your "dev" branch to "main"
-    iv. Deploy your "main" branch publicly
-    v. Iteratively merge in future "dev" branches to update your "main" deployment
+
+i. In your project, create a "dev" branch to deploy from
+ii. Deploy the "dev" branch to Posit Connect as private
+iii. Once you're happy with the deployment, merge your "dev" branch to "main"
+iv. Deploy your "main" branch publicly
+v. Iteratively merge in future "dev" branches to update your "main" deployment
 
 ### In your project
 1. In your project repository on GitHub, create a branch off of "main" called "dev"
-2. Install the R package called ["{rsconnect}"](https://rstudio.github.io/rsconnect/)
+2. Install the R package called [{rsconnect}](https://rstudio.github.io/rsconnect/)
     a. While in top-level folder your project, run the command `rsconnect::writeManifest()`. This will compile a file called "manifest.json" that Posit Connect will read to host your project on the server. See more information [here](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
+    
 ### On the SALT Posit Connect Server
 1. On the "Content" tab of Posit Connect, click the blue "Publish" button and select "Import from Git" from the dropdown menu
 2. In the text box, paste the URL of your Git repository (on GitHub, select "Code" -> copy for the correct URL)

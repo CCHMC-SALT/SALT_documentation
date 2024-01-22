@@ -375,24 +375,33 @@ your credentials as normal</li>
 <p>At SALT, we are utilizing git-backed deployment for publishing. This
 best-practice technique ensures that your reports and dashboards are
 always updated and proper version control is enacted. We encourage
-publishers to use the following workflow: i. In your project, create a
-“dev” branch to deploy from ii. Deploy the “dev” branch to Posit Connect
-as private iii. Once you’re happy with the deployment, merge your “dev”
-branch to “main” iv. Deploy your “main” branch publicly v. Iteratively
-merge in future “dev” branches to update your “main” deployment</p>
+publishers to use the following workflow:</p>
+<ol style="list-style-type: lower-roman">
+<li>In your project, create a “dev” branch to deploy from</li>
+<li>Deploy the “dev” branch to Posit Connect as private</li>
+<li>Once you’re happy with the deployment, merge your “dev” branch to
+“main”</li>
+<li>Deploy your “main” branch publicly</li>
+<li>Iteratively merge in future “dev” branches to update your “main”
+deployment</li>
+</ol>
 <div id="in-your-project" class="section level3">
 <h3>In your project</h3>
 <ol style="list-style-type: decimal">
 <li>In your project repository on GitHub, create a branch off of “main”
 called “dev”</li>
-<li>Install the R package called <a href="https://rstudio.github.io/rsconnect/">“{rsconnect}”</a>
+<li>Install the R package called <a href="https://rstudio.github.io/rsconnect/">{rsconnect}</a>
 <ol style="list-style-type: lower-alpha">
 <li>While in top-level folder your project, run the command
 <code>rsconnect::writeManifest()</code>. This will compile a file called
 “manifest.json” that Posit Connect will read to host your project on the
-server. See more information <a href="https://rstudio.github.io/rsconnect/reference/writeManifest.html">here</a>
-### On the SALT Posit Connect Server</li>
+server. See more information <a href="https://rstudio.github.io/rsconnect/reference/writeManifest.html">here</a></li>
 </ol></li>
+</ol>
+</div>
+<div id="on-the-salt-posit-connect-server" class="section level3">
+<h3>On the SALT Posit Connect Server</h3>
+<ol style="list-style-type: decimal">
 <li>On the “Content” tab of Posit Connect, click the blue “Publish”
 button and select “Import from Git” from the dropdown menu</li>
 <li>In the text box, paste the URL of your Git repository (on GitHub,
