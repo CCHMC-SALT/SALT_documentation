@@ -392,10 +392,10 @@ deployment</li>
 called “dev”</li>
 <li>Install the R package called <a href="https://rstudio.github.io/rsconnect/">{rsconnect}</a>
 <ol style="list-style-type: lower-alpha">
-<li>While in top-level folder your project, run the command
-<code>rsconnect::writeManifest()</code>. This will compile a file called
-“manifest.json” that Posit Connect will read to host your project on the
-server. See more information <a href="https://rstudio.github.io/rsconnect/reference/writeManifest.html">here</a></li>
+<li>While in the folder and working directory of the document that you
+are publishing, run the command <code>rsconnect::writeManifest()</code>.
+This will compile a file called “manifest.json” that Posit Connect will
+read to host your project on the server. See more information <a href="https://rstudio.github.io/rsconnect/reference/writeManifest.html">here</a></li>
 </ol></li>
 </ol>
 </div>
@@ -413,10 +413,63 @@ select “Code” -&gt; copy for the correct URL)</li>
 <li>If you have already privately deployed your dev branch, approved it
 and merged it in, select your “main” branch</li>
 </ol></li>
+<li>Select your root folder. This will be the folder where your
+<code>manifest.json</code> was written and stored</li>
 <li>Title your content. For clarity, if this is a “dev” branch, please
-title your content as “dev_[your_title]”</li>
+title your content as “[dev]_{your_title}”</li>
 <li>Select “Deploy Content”</li>
 </ol>
+</div>
+<div id="publishing-options" class="section level3">
+<h3>Publishing Options</h3>
+<ul>
+<li>Access
+<ul>
+<li>There are three available options for visibility:
+<ol style="list-style-type: lower-roman">
+<li>Publicly available to anyone with the URL</li>
+<li>Require a CCHMC login</li>
+<li>Limit to specific users/email addresses</li>
+</ol></li>
+<li>Adjust these settings by first, while your content is pulled up,
+selecting the gear icon, then the open padlock icon called
+“Access”.</li>
+</ul></li>
+<li>Web address
+<ul>
+<li>While the URL will always begin with “<a href="https://dev.salt.cchmc.org" class="uri">https://dev.salt.cchmc.org</a>”, you have the ability to
+create a custom suffix. Under the “Access” tab in settings, enter the
+suffix you would like in the Path text box. For example, if you type
+“my_app”, your new URL will be “<a href="https://dev.salt.cchmc.org/my_app" class="uri">https://dev.salt.cchmc.org/my_app</a>”</li>
+</ul></li>
+<li>Scheduling
+<ul>
+<li>If you are publishing a document like an Rmarkdown or Quarto, you
+have the option to schedule regular renderings of that document under
+the “Schedule” tab</li>
+</ul></li>
+<li>After adjusting any of these settings, be sure to hit the Save
+button near the top of the panel</li>
+</ul>
+</div>
+<div id="tags" class="section level3">
+<h3>Tags</h3>
+<ul>
+<li>For tracking purposes, a SALT admin will create a tag for your
+project/group. This will primarily be used for usage monitoring, but may
+be used to determine costs of hosting the object. Simply click the box
+relevant for your content</li>
+</ul>
+</div>
+<div id="troubleshooting" class="section level3">
+<h3>Troubleshooting</h3>
+<ul>
+<li>If you click on the symbol that looks like a little notebook, that
+will pull up the log of your content. In here, you will be able to see
+both the posit connect log and a log that looks like your typical R
+console. Here, you will find error messages, making this a great place
+to start if your app or document is not publishing correctly</li>
+</ul>
 </div>
 </div>
 </div>

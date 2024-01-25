@@ -22,7 +22,7 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 ### In your project
 1. In your project repository on GitHub, create a branch off of "main" called "dev"
 2. Install the R package called [{rsconnect}](https://rstudio.github.io/rsconnect/)
-    a. While in top-level folder your project, run the command `rsconnect::writeManifest()`. This will compile a file called "manifest.json" that Posit Connect will read to host your project on the server. See more information [here](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
+    a. While in the folder and working directory of the document that you are publishing, run the command `rsconnect::writeManifest()`. This will compile a file called "manifest.json" that Posit Connect will read to host your project on the server. See more information [here](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
     
 ### On the SALT Posit Connect Server
 1. On the "Content" tab of Posit Connect, click the blue "Publish" button and select "Import from Git" from the dropdown menu
@@ -30,8 +30,28 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 3. Select your branch
     a. If this is your first time publishing this project, select your "dev" branch
     b. If you have already privately deployed your dev branch, approved it and merged it in, select your "main" branch
-4. Title your content. For clarity, if this is a "dev" branch, please title your content as "dev_[your_title]"
-5. Select "Deploy Content"
+4. Select your root folder. This will be the folder where your `manifest.json` was written and stored
+6. Title your content. For clarity, if this is a "dev" branch, please title your content as "[dev]_{your_title}"
+6. Select "Deploy Content"
+
+### Publishing Options
+- Access
+    - There are three available options for visibility: 
+        i. Publicly available to anyone with the URL
+        ii. Require a CCHMC login
+        iii. Limit to specific users/email addresses
+    - Adjust these settings by first, while your content is pulled up, selecting the gear icon, then the open padlock icon called "Access".
+- Web address
+    - While the URL will always begin with "https://dev.salt.cchmc.org", you have the ability to create a custom suffix. Under the "Access" tab in settings, enter the suffix you would like in the Path text box. For example, if you type "my_app", your new URL will be "https://dev.salt.cchmc.org/my_app"
+- Scheduling
+    - If you are publishing a document like an Rmarkdown or Quarto, you have the option to schedule regular renderings of that document under the "Schedule" tab
+- After adjusting any of these settings, be sure to hit the Save button near the top of the panel
+
+### Tags
+- For tracking purposes, a SALT admin will create a tag for your project/group. This will primarily be used for usage monitoring, but may be used to determine costs of hosting the object. Simply click the box relevant for your content
+
+### Troubleshooting
+- If you click on the symbol that looks like a little notebook, that will pull up the log of your content. In here, you will be able to see both the posit connect log and a log that looks like your typical R console. Here, you will find error messages, making this a great place to start if your app or document is not publishing correctly
 
 
 
