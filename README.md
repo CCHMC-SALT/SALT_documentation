@@ -19,7 +19,7 @@ ii. Deploy the "dev" branch to Posit Connect as private
 
 iii. Once you're happy with the deployment, merge your "dev" branch to "main"
 
-iv. Deploy your "main" branch publicly
+iv. Deploy your "main" branch publicly; delete "dev" deployment
 
 v. Iteratively merge in future "dev" branches to update your "main" deployment
 
@@ -38,6 +38,7 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 4. Select your root folder. This will be the folder where your `manifest.json` was written and stored
 6. Title your content. For clarity, if this is a "dev" branch, please title your content as "[dev]_{your_title}"
 6. Select "Deploy Content"
+7. If deploying for production, delete your "dev" deployment
 
 ### Publishing Options
 - Access
@@ -57,6 +58,7 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 
 ### Troubleshooting
 - If you click on the symbol that looks like a little notebook, that will pull up the log of your content. In here, you will be able to see both the posit connect log and a log that looks like your typical R console. Here, you will find error messages, making this a great place to start if your app or document is not publishing correctly
+- For additonal help, please reach out to Cole Brokamp at [cole.brokamp\@cchmc.org](mailto:cole.brokamp@cchmc.org){.email} or Andrew Vancil at [andrew.vancil\@cchmc.org](mailto:andrew.vancil@cchmc.org){.email}
 
 
 
