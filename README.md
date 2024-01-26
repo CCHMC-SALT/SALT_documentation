@@ -14,10 +14,15 @@
 At SALT, we are utilizing git-backed deployment for publishing. This best-practice technique ensures that your reports and dashboards are always updated and proper version control is enacted. We encourage publishers to use the following workflow:
 
 i. In your project, create a "dev" branch to deploy from
+
 ii. Deploy the "dev" branch to Posit Connect as private
+
 iii. Once you're happy with the deployment, merge your "dev" branch to "main"
+
 iv. Deploy your "main" branch publicly
+
 v. Iteratively merge in future "dev" branches to update your "main" deployment
+
 
 ### In your project
 1. In your project repository on GitHub, create a branch off of "main" called "dev"
