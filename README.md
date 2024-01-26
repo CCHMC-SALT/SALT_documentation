@@ -58,6 +58,7 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 
 ### Troubleshooting
 - If you click on the symbol that looks like a little notebook, that will pull up the log of your content. In here, you will be able to see both the posit connect log and a log that looks like your typical R console. Here, you will find error messages, making this a great place to start if your app or document is not publishing correctly
+- For more information on git-backed deployment, please see the documentation [here](https://docs.posit.co/connect/user/git-backed/).
 - For additonal help, please reach out to Cole Brokamp at [cole.brokamp\@cchmc.org](mailto:cole.brokamp@cchmc.org){.email} or Andrew Vancil at [andrew.vancil\@cchmc.org](mailto:andrew.vancil@cchmc.org){.email}
 
 
