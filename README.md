@@ -4,41 +4,56 @@
 
 ## Login to Posit Connect
 
-1.  Go to [dev.salt.cchmc.org](https://dev.salt.cchmc.org)
-2.  In the top-right corner, click on the "login" button.
-    a.  This should send you to a familiar-looking CCHMC login page; enter your credentials as normal
+1. Go to [dev.salt.cchmc.org](https://dev.salt.cchmc.org)
+2. On the landing page, scroll down and click on the link to register with SALT
+a. This will link to a brief REDCap survey where you can enter your basic information and agree to the SALT use terms
+b. A SALT admin will create a user account with your CCHMC email that you can use for access
+2.  Once you have been confirmed to have access, back at the SALT landing page, in the top-right corner, click on the "login" button.
+a.  This should send you to a familiar-looking CCHMC login page; enter your credentials as normal
 3.  This should bring you to a page that looks something like this: ![content landing page](figs/content_landing_page.png)
 
 ## Git-backed Deployment
 
 At SALT, we are utilizing git-backed deployment for publishing. This best-practice technique ensures that your reports and dashboards are always updated and proper version control is enacted. We encourage publishers to use the following workflow:
-
+    
 i. In your project, create a "dev" branch to deploy from
 
 ii. Deploy the "dev" branch to Posit Connect as private
 
-iii. Once you're happy with the deployment, merge your "dev" branch to "main"
+iii. Once you're happy with the deployment, create a pull request of your "dev" branch and request a review from a SALT admin; merge into "main"
 
 iv. Deploy your "main" branch publicly; delete "dev" deployment
 
 v. Iteratively merge in future "dev" branches to update your "main" deployment
 
 
-### In your project
-1. In your project repository on GitHub, create a branch off of "main" called "dev"
-2. Install the R package called [{rsconnect}](https://rstudio.github.io/rsconnect/)
-    a. While in the folder and working directory of the document that you are publishing, run the command `rsconnect::writeManifest()`. This will compile a file called "manifest.json" that Posit Connect will read to host your project on the server. See more information [here](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
+### On GitHub
+1. Fork your project repository into the [CCHMC-SALT](https://github.com/orgs/CCHMC-SALT/repositories) organization
+    a. If your project is not on GitHub, add it to the CCHMC-SALT organization. For more information on GitHub generally, read [here](https://docs.github.com/en/get-started/quickstart/hello-world) and for a great tutorial on using GitHub with R and RStudio, check out this [book](https://happygitwithr.com/)
+2. Create a branch called "dev"
+
+### In your RStudio project
+1. Install the R package [{rsconnect}](https://rstudio.github.io/rsconnect/)
+2. While in the folder and working directory of the document that you are publishing, run the command `rsconnect::writeManifest()`. This will compile a file called "manifest.json" that Posit Connect will later read in order to host your project on the server. See more information [here](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
+3. Commit and push your "manifest.json" file to GitHub
     
 ### On the SALT Posit Connect Server
 1. On the "Content" tab of Posit Connect, click the blue "Publish" button and select "Import from Git" from the dropdown menu
 2. In the text box, paste the URL of your Git repository (on GitHub, select "Code" -> copy for the correct URL)
 3. Select your branch
     a. If this is your first time publishing this project, select your "dev" branch
-    b. If you have already privately deployed your dev branch, approved it and merged it in, select your "main" branch
+    b. If you have gone trough the approval process, select your "main" branch; For more information on this, see the section below entitled "Production Deployment"
 4. Select your root folder. This will be the folder where your `manifest.json` was written and stored
 6. Title your content. For clarity, if this is a "dev" branch, please title your content as "[dev]_{your_title}"
 6. Select "Deploy Content"
-7. If deploying for production, delete your "dev" deployment
+
+### Production Deployment
+1. After you have successfully deployed your "dev" branch and are happy with how it presents online, return to your project's GitHub repository and create a pull request for your "dev" branch
+2. Request a review from a SALT admin, either Andrew Vancil (andrew-vancil) or Cole Brokamp (cole-brokamp)
+    a. Once approved, the admin will merge your branch into main
+3. Return to the SALT Posit Connect interface and follow the steps listed above, but this time select the "main" branch when prompted
+4. Delete your "[dev]_{your_title}" deployment
+
 
 ### Publishing Options
 - Access
@@ -63,4 +78,4 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 
 
 
-    
+
