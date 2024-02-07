@@ -36,9 +36,8 @@ v. Iteratively merge in future "dev" branches to update your "main" deployment
 2. Create a branch called "dev"
 
 ### In your RStudio project
-1. Install the R package [{rsconnect}](https://rstudio.github.io/rsconnect/)
-2. While in the folder and working directory of the document that you are publishing, run the command `rsconnect::writeManifest()`. This will compile a file called "manifest.json" that Posit Connect will later read in order to host your project on the server. See more information [here](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
-3. Commit and push your "manifest.json" file to GitHub
+
+Use [`rsconnect::writeManifest()`](https://rstudio.github.io/rsconnect/) in R to add or update a [`manifest.json` file](https://rstudio.github.io/rsconnect/reference/writeManifest.html). Commit this file and push to GitHub.
     
 ### On the SALT Posit Connect Server
 1. On the "Content" tab of Posit Connect, click the blue "Publish" button and select "Import from Git" from the dropdown menu
