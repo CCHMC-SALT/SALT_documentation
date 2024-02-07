@@ -5,16 +5,19 @@
 ## Login to Posit Connect
 
 1. Go to [dev.salt.cchmc.org](https://dev.salt.cchmc.org)
-2. On the landing page, scroll down and click on the link to register with SALT
-a. This will link to a brief REDCap survey where you can enter your basic information and agree to the SALT use terms
-b. A SALT admin will create a user account with your CCHMC email that you can use for access
-2.  Once you have been confirmed to have access, back at the SALT landing page, in the top-right corner, click on the "login" button.
-a.  This should send you to a familiar-looking CCHMC login page; enter your credentials as normal
-3.  This should bring you to a page that looks something like this: ![content landing page](figs/content_landing_page.png)
+
+1. On the landing page, scroll down and click on the link to register with SALT  
+  a. This will link to a brief REDCap survey where you can enter your basic information and agree to the SALT use terms  
+  b. A SALT admin will create a user account with your CCHMC email that you can use for access
+  
+1.  Once you have been confirmed to have access, back at the SALT landing page, in the top-right corner, click on the "login" button.  
+  a.  This should send you to a familiar-looking CCHMC login page; enter your credentials as normal  
+  
+1.  This should bring you to the SALT Posit Connect dasbhoard: ![content landing page](figs/content_landing_page.png)
 
 ## Git-backed Deployment
 
-At SALT, we are utilizing git-backed deployment for publishing. This best-practice technique ensures that your reports and dashboards are always updated and proper version control is enacted. We encourage publishers to use the following workflow:
+For SALT, content is deployed using the git version control system and GitHub, which allows for continuous integration and testing of data content. To publish to SALT using a git repository on GitHub:
     
 i. In your project, create a "dev" branch to deploy from
 
