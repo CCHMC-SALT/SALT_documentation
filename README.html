@@ -397,26 +397,35 @@ deployment</p></li>
 <li><p>Iteratively merge in future “dev” branches to update your “main”
 deployment</p></li>
 </ol>
-<div id="on-github" class="section level3">
-<h3>On GitHub</h3>
-<ol style="list-style-type: decimal">
-<li>Fork your project repository into the <a href="https://github.com/orgs/CCHMC-SALT/repositories">CCHMC-SALT</a>
-organization
-<ol style="list-style-type: lower-alpha">
-<li>If your project is not on GitHub, add it to the CCHMC-SALT
-organization. For more information on GitHub generally, read <a href="https://docs.github.com/en/get-started/quickstart/hello-world">here</a>
-and for a great tutorial on using GitHub with R and RStudio, check out
-this <a href="https://happygitwithr.com/">book</a></li>
-</ol></li>
-<li>Create a branch called “dev”</li>
-</ol>
-</div>
 <div id="in-your-rstudio-project" class="section level3">
 <h3>In your RStudio project</h3>
 <ol style="list-style-type: decimal">
 <li>Use <a href="https://rstudio.github.io/rsconnect/"><code>rsconnect::writeManifest()</code></a>
 in R to add or update a <a href="https://rstudio.github.io/rsconnect/reference/writeManifest.html"><code>manifest.json</code>
-file</a>. Commit this file and push to GitHub.</li>
+file</a></li>
+</ol>
+</div>
+<div id="on-github" class="section level3">
+<h3>On GitHub</h3>
+<ol style="list-style-type: decimal">
+<li>If your project is not on GitHub, add it to the <a href="https://github.com/orgs/CCHMC-SALT/repositories">CCHMC-SALT</a>
+organization. For more information on GitHub generally, read <a href="https://docs.github.com/en/get-started/quickstart/hello-world">here</a>
+and for a great tutorial on using GitHub with R and RStudio, check out
+this <a href="https://happygitwithr.com/">book</a>
+<ol style="list-style-type: lower-alpha">
+<li>If you already have a project elsewhere on GitHub, email a SALT
+admin (<a href="mailto:andrew.vancil@cchmc.org" class="email">andrew.vancil@cchmc.org</a> or <a href="mailto:cole.brokamp@cchmc.org" class="email">cole.brokamp@cchmc.org</a>) to request that they fork your
+project into the CCHMC-SALT organization</li>
+</ol></li>
+<li>Commit and push your manifest.json file that you created above to
+GitHub</li>
+<li>In your original repository, create a branch called “dev”</li>
+<li>In the forked repository (at CCHMC-SALT), open an issue to ask the
+SALT admin to sync the fork to your original repository
+<ol style="list-style-type: lower-alpha">
+<li>If updating content, make the changes on your original repository
+and then open an issue to request the sync</li>
+</ol></li>
 </ol>
 </div>
 <div id="on-the-salt-posit-connect-server" class="section level3">
@@ -424,8 +433,8 @@ file</a>. Commit this file and push to GitHub.</li>
 <ol style="list-style-type: decimal">
 <li>On the “Content” tab of Posit Connect, click the blue “Publish”
 button and select “Import from Git” from the dropdown menu</li>
-<li>In the text box, paste the URL of your Git repository (on GitHub,
-select “Code” -&gt; copy for the correct URL)</li>
+<li>In the text box, paste the URL of your CCHMC-SALT Git repository (on
+GitHub, select “Code” -&gt; copy for the correct URL)</li>
 <li>Select your branch
 <ol style="list-style-type: lower-alpha">
 <li>If this is your first time publishing this project, select your
@@ -445,10 +454,11 @@ title your content as “[dev]_{your_title}”</li>
 <h3>Production Deployment</h3>
 <ol style="list-style-type: decimal">
 <li>After you have successfully deployed your “dev” branch and are happy
-with how it presents online, return to your project’s GitHub repository
-and create a pull request for your “dev” branch</li>
-<li>Request a review from a SALT admin, either Andrew Vancil
-(andrew-vancil) or Cole Brokamp (cole-brokamp)
+with how it presents online, return to your project’s original GitHub
+repository and create a pull request for your “dev” branch</li>
+<li>Open an Issue on the CCHMC-SALT version and request a review from a
+SALT admin, either Andrew Vancil (andrew-vancil) or Cole Brokamp
+(cole-brokamp)
 <ol style="list-style-type: lower-alpha">
 <li>Once approved, the admin will merge your branch into main</li>
 </ol></li>

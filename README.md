@@ -27,18 +27,22 @@ For SALT, content is deployed using the git version control system and GitHub, w
 5. Iteratively merge in future "dev" branches to update your "main" deployment
 
 
-### On GitHub
-1. Fork your project repository into the [CCHMC-SALT](https://github.com/orgs/CCHMC-SALT/repositories) organization
-    a. If your project is not on GitHub, add it to the CCHMC-SALT organization. For more information on GitHub generally, read [here](https://docs.github.com/en/get-started/quickstart/hello-world) and for a great tutorial on using GitHub with R and RStudio, check out this [book](https://happygitwithr.com/)
-2. Create a branch called "dev"
-
 ### In your RStudio project
 
-1. Use [`rsconnect::writeManifest()`](https://rstudio.github.io/rsconnect/) in R to add or update a [`manifest.json` file](https://rstudio.github.io/rsconnect/reference/writeManifest.html). Commit this file and push to GitHub.
+1. Use [`rsconnect::writeManifest()`](https://rstudio.github.io/rsconnect/) in R to add or update a [`manifest.json` file](https://rstudio.github.io/rsconnect/reference/writeManifest.html)
+
+### On GitHub
+
+1. If your project is not on GitHub, add it to the [CCHMC-SALT](https://github.com/orgs/CCHMC-SALT/repositories) organization. For more information on GitHub generally, read [here](https://docs.github.com/en/get-started/quickstart/hello-world) and for a great tutorial on using GitHub with R and RStudio, check out this [book](https://happygitwithr.com/)
+    a. If you already have a project elsewhere on GitHub, email a SALT admin (andrew.vancil@cchmc.org or cole.brokamp@cchmc.org) to request that they fork your project into the CCHMC-SALT organization
+2. Commit and push your manifest.json file that you created above to GitHub
+3. In your original repository, create a branch called "dev"
+4. In the forked repository (at CCHMC-SALT), open an issue to ask the SALT admin to sync the fork to your original repository
+    a. If updating content, make the changes on your original repository and then open an issue to request the sync
     
 ### On the SALT Posit Connect Server
 1. On the "Content" tab of Posit Connect, click the blue "Publish" button and select "Import from Git" from the dropdown menu
-2. In the text box, paste the URL of your Git repository (on GitHub, select "Code" -> copy for the correct URL)
+2. In the text box, paste the URL of your CCHMC-SALT Git repository (on GitHub, select "Code" -> copy for the correct URL)
 3. Select your branch
     a. If this is your first time publishing this project, select your "dev" branch
     b. If you have gone trough the approval process, select your "main" branch; For more information on this, see the section below entitled "Production Deployment"
@@ -47,8 +51,8 @@ For SALT, content is deployed using the git version control system and GitHub, w
 6. Select "Deploy Content"
 
 ### Production Deployment
-1. After you have successfully deployed your "dev" branch and are happy with how it presents online, return to your project's GitHub repository and create a pull request for your "dev" branch
-2. Request a review from a SALT admin, either Andrew Vancil (andrew-vancil) or Cole Brokamp (cole-brokamp)
+1. After you have successfully deployed your "dev" branch and are happy with how it presents online, return to your project's original GitHub repository and create a pull request for your "dev" branch
+2. Open an Issue on the CCHMC-SALT version and request a review from a SALT admin, either Andrew Vancil (andrew-vancil) or Cole Brokamp (cole-brokamp)
     a. Once approved, the admin will merge your branch into main
 3. Return to the SALT Posit Connect interface and follow the steps listed above, but this time select the "main" branch when prompted
 4. Delete your "[dev]_{your_title}" deployment. Alternatively, you may choose to keep your [dev] branch active for further development, but it may incur operating costs
