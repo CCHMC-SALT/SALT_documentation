@@ -67,6 +67,8 @@ For tracking purposes, a SALT admin will create a tag for your project/group. Th
 ## Troubleshooting
 Checking the [log](https://docs.posit.co/connect/user/content-settings/#content-logs) is often the best place to start troubleshooting. Here, you will find error messages that can help you figure out why your document may not be displaying how you would like it to. To find the log, click on the symbol at the top of your content control panel that looks like a little notebook. In here, you will be able to see both the posit connect log and a log that looks like your typical R console from each deployment instance. Explore these to find your error messages and begin troubleshooting. Further troubleshooting tips [here](https://docs.posit.co/connect/user/troubleshooting/).
 
+If your content is a regularly rendered report, especially with living data sources, we encourage developers to employ data validation. Two great packages to get started with are [{data.validator}](https://appsilon.github.io/data.validator/) and [{pointblank}](https://rstudio.github.io/pointblank/). 
+
 For more information on git-backed deployment, please see the documentation [here](https://docs.posit.co/connect/user/git-backed/).
 
 For additional help, please reach out to Cole Brokamp at [cole.brokamp\@cchmc.org](mailto:cole.brokamp@cchmc.org){.email} or Andrew Vancil at [andrew.vancil\@cchmc.org](mailto:andrew.vancil@cchmc.org){.email}
