@@ -4,7 +4,7 @@
 
 ## Login to Posit Connect
 
-1. Go to [dev.salt.cchmc.org](https://dev.salt.cchmc.org)
+1. Go to [salt.cchmc.org](https://salt.cchmc.org)
 2. On the landing page, scroll down and click on the link to register with SALT  
     a. This will link to a brief REDCap survey where you can enter your basic information and agree to the SALT use terms  
     b. A SALT admin will create a user account with your CCHMC email that you can use for access
